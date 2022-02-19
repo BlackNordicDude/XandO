@@ -1,0 +1,76 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+body
+    position: relative
+.loadscreen
+    height: 100vh
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    background: linear-gradient(225deg, #0080ff, #061e36)
+    opacity: 1
+    transition: 0.6s
+    z-index: 15
+    &_wrapper
+        width: 200px
+        height: 300px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 10%
+        left: 50%
+        transform: translateX(-50%)
+        border: 2px solid black
+    &_logo
+        font-size: 10em
+        transition: 0.5s
+.main
+    position: absolute
+    top: 0
+    height: 100vh
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    z-index: 10
+    opacity: 0
+    transition: 0.5s
+    background: linear-gradient(45deg, #0080ff, #061e36)
+    &_info
+        width: 110px
+        height: 20px
+        text-align: center
+        background: linear-gradient(225deg, #0080ff, #061e36)
+        border: 2px solid black 
+        z-index: 15
+    &_board
+        width: 304px
+        height: 304px
+        background: #ebf1ac
+        display: flex
+        flex-wrap: wrap
+        border: 2px solid black
+        &_cell
+            width: 100px
+            height: 100px
+            border: 2px solid black
+    &_btns
+        width: 150px
+        height: 40px
+        display: flex
+        justify-content: space-between
+        &_icons
+            display: flex
+            align-items: center
+.X 
+    background: url(../png/X.png)
+.O
+    background: url(../png/O.png)
+.red
+    background: red
